@@ -1,4 +1,4 @@
-from .uni import university
+from uni import *
 
 
 """
@@ -12,17 +12,17 @@ class TzUniPy():
     """
     def all_universities():
         # print(university)
-        return university
+        return Uni().university()
 
 
     """
-    method which returns all universities in a given region
+    method which returns objects of all universities in a given region
     """
     def get_univeristy(region):
         uni_in_region = []
-        for x in university:
+        for x in Uni().university():
             if region in x:
-                uni_in_region.append(x)
+                uni_in_region.append(University(x))
 
         # print(uni_in_region)
         return uni_in_region
