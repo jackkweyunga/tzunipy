@@ -58,8 +58,23 @@ pip3 install tzunipy
 # get universities from a given region
 >>> TzUniPy.get_univeristy('Dodoma')
 
->>> ["University of Dodoma UDOM (Dodoma)",
+["University of Dodoma UDOM (Dodoma)",
       "St. John's University of Tanzania SJUT (Dodoma)"]
+      
+>>> # to get colleges of a university
+>>> single = TzUniPy.get_univeristy('Dar')[0] # returns 1 universtity in Dar
+>>> print(single.name)
+'University of Dar es Salaam UDSM (Dar es Salaam)'
+>>> print(single.colleges)
+[
+   College of Social Science (CoSS), 
+   College of Information and Communication Technologies (CoICT), 
+   College of Engineering and Technology (CoET), 
+   College of Natural and Applied Science (CoNAS),
+   ...
+   ...
+   
+   ]
 
 
 ```
